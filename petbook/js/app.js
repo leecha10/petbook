@@ -3,6 +3,8 @@ var app = angular.module("PB", ['firebase']);
 var owner;
 var latitude;
 var longitude;
+var animal;
+
 app.factory('$localstorage', ['$window', function($window) {
 	return {
 		set: function(key, value) {
@@ -33,8 +35,6 @@ app.controller("Ctrl", function ($scope, $firebaseArray, $firebaseObject, $local
 		$scope.detail;
 		$scope.food;
 		$scope.personality;
-		$scope.latitude;
-		$scope.longitude;
 
     var firebaseURL = "https://cyleepet.firebaseio.com/";
 
@@ -58,9 +58,10 @@ app.controller("Ctrl", function ($scope, $firebaseArray, $firebaseObject, $local
 			function success(position) {
 		    latitude  = position.coords.latitude;
 		    longitude = position.coords.longitude;
-
+				animal = Math.floor(Math.random() * 100000) + 1;
 				$scope.profileArr.$add({
 					id: owner,
+					pet: animal,
 					name: $scope.name,
 					height: $scope.height,
 					weight: $scope.weight,
