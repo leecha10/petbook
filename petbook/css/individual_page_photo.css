@@ -1,0 +1,10 @@
+#photo_tap{
+	background-color: #8BA9E6;
+}
+
+.each_photo{
+	float: left;
+	width: 30%;
+	margin: 0 1.5% 3% 1.5%;
+
+}
