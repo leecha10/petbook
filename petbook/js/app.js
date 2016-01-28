@@ -121,7 +121,7 @@ app.controller("Ctrl", function ($scope, $firebaseArray, $firebaseObject, $local
       delete $scope.$authData;
 			$localstorage.set("authData", false);
 			console.log($localstorage.get("authData")+" is set.");
-			owner = undefined;
+			
       // do something after logout
 			location.href="index.html";
     };
