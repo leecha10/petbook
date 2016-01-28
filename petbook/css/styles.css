@@ -391,8 +391,11 @@ small.text-muted {
   .panel-thumbnail{
     height: 152px;
   } 
-
-
+@media (max-width: 420px){
+  .pet_kind {
+      text-align: left;
+  } 
+}
   .pet_kind{
     width: 80%;
   }
