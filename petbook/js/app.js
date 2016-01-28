@@ -123,9 +123,8 @@ app.controller("Ctrl", function ($scope, $firebaseArray, $firebaseObject, $local
 			console.log($localstorage.get("authData")+" is set.");
 			owner = undefined;
       // do something after logout
-    }.then(function() {
 			location.href="index.html";
-		});
+    };
 
 		var refImg = new Firebase("https://cyleepet.firebaseio.com/");
 		var ImgObj = $firebaseObject(refImg);
